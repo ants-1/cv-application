@@ -1,36 +1,43 @@
+import Inputs from "./Inputs";
+import Button from "./Button";
+import SectionHeader from "./SectionHeader";
+
 function Education() {
+  const sectionHeaderInfo = {
+    headerIcon: "src/assets/education.png",
+    menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
+  };
   return (
     <>
-      <div className="education">
-        <img src="src/assets/education.png" alt="General Infomation Icon" />
-        <h2>Education</h2>
-        <img src="src/assets/arrow-down-sign-to-navigate.png" alt="" />
-      </div>
+      <SectionHeader
+        headerClassName="education"
+        headerName="Education"
+        iconSrc={sectionHeaderInfo.headerIcon}
+        menuIcon={sectionHeaderInfo.menuIcon}
+      />
       <div className="input-section">
-        <label htmlFor="course">
-            <p>Course:</p>
-            <input type="text" name="course" id="course" />
-        </label>
-        <label htmlFor="school">
-            <p>School Name:</p>
-            <input type="text" name="school" id="school" />
-        </label>
-        <label htmlFor="start-date">
-            <p>Start Date</p>
-            <input type="date" name="start-date" id="start-date" />
-        </label>
-        <label htmlFor="end-date">
-            <p>End Date</p>
-            <input type="date" name="end-date" id="end-date" />
-        </label>
-        <label htmlFor="city">
-            <p>City:</p>
-            <input type="text" name="city" id="city" />
-        </label>
-        <label htmlFor="country">
-            <p>Country (Optional):</p>
-            <input type="text" name="country" id="country" />
-        </label>
+        <Inputs name="course" type="text" id="course" labelText="Course:" />
+        <Inputs name="school" type="text" id="school" labelText="School:" />
+        <Inputs
+          name="start-date"
+          type="date"
+          id="start-date"
+          labelText="Start Date:"
+        />
+        <Inputs
+          name="end-date"
+          type="date"
+          id="end-date"
+          labelText="End Date:"
+        />
+        <Inputs name="city" type="text" id="city" labelText="City:" />
+        <Inputs
+          name="country"
+          type="text"
+          id="country"
+          labelText="Country (Optional):"
+        />
+        <Button name="Submit" type="submit" />
       </div>
     </>
   );

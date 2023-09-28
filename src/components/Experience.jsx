@@ -1,32 +1,52 @@
+import Inputs from "./Inputs";
+import Button from "./Button";
+import SectionHeader from "./SectionHeader";
+
 function Experience() {
+  const sectionHeaderInfo = {
+    headerIcon: "src/assets/job-icon.png",
+    menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
+  };
   return (
     <>
-      <div className="experience">
-        <img src="src/assets/job-icon.png" alt="General Infomation Icon" />
-        <h2>Education</h2>
-        <img src="src/assets/arrow-down-sign-to-navigate.png" alt="" />
-      </div>
+      <SectionHeader
+        headerClassName="experience"
+        headerName="Experience"
+        iconSrc={sectionHeaderInfo.headerIcon}
+        menuIcon={sectionHeaderInfo.menuIcon}
+      />
       <div className="input-section">
-        <label htmlFor="company-name">
-          <p>Company Name:</p>
-          <input type="text" name="company-name" id="company-name" />
-        </label>
-        <label htmlFor="position">
-            <p>Position Title:</p>
-            <input type="text" name="position" id="position" />
-        </label>
-        <label htmlFor="description">
-            <p>Description:</p>
-            <input type="text" name="description" id="description" />
-        </label>
-        <label htmlFor="start-date">
-            <p>Start Date:</p>
-            <input type="date" name="start-date" id="start-date" />
-        </label>
-        <label htmlFor="end-date">
-            <p>End Date:</p>
-            <input type="date" name="end-date" id="end-date" />
-        </label>
+        <Inputs
+          name="company-name"
+          type="text"
+          id="company-name"
+          labelText="Company Name:"
+        />
+        <Inputs
+          name="position"
+          type="text"
+          id="position"
+          labelText="Position Title:"
+        />
+        <Inputs
+          name="description"
+          type="text"
+          id="description"
+          labelText="Description: "
+        />
+        <Inputs
+          name="start-date"
+          type="date"
+          id="start-date"
+          labelText="Start Date:"
+        />
+        <Inputs
+          name="end-date"
+          type="date"
+          id="end-date"
+          labelText="End Date:"
+        />
+        <Button name="Submit" type="type" />
       </div>
     </>
   );
