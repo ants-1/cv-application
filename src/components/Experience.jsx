@@ -8,7 +8,7 @@ function Experience() {
     menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
   };
   return (
-    <>
+    <div className="section">
       <SectionHeader
         headerClassName="experience"
         headerName="Experience"
@@ -48,7 +48,7 @@ function Experience() {
         />
         <Button name="Submit" type="type" />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -8,7 +8,7 @@ function Education() {
     menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
   };
   return (
-    <>
+    <div className="section">
       <SectionHeader
         headerClassName="education"
         headerName="Education"
@@ -39,7 +39,7 @@ function Education() {
         />
         <Button name="Submit" type="submit" />
       </div>
-    </>
+    </div>
   );
 }
 

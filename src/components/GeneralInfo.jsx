@@ -8,7 +8,7 @@ function GeneralInfo() {
     menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
   };
   return (
-    <>
+    <div className="section">
       <SectionHeader
         headerClassName="general-info"
         headerName="General Information"
@@ -30,9 +30,8 @@ function GeneralInfo() {
           labelText="Phone Number:"
         />
         <Inputs name="address" type="text" id="address" labelText="Address:" />
-        <Button name="Submit" type="type" />
       </div>
-    </>
+    </div>
   );
 }
 
