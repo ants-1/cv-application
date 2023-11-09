@@ -10,7 +10,7 @@ function Education({ education, saveEducation }) {
           <p>
             Start Date: {edu.startDate}, End Date: {edu.endDate}
           </p>
-          <button onClick={() => saveEducation(edu.id)}>Edit</button>
+          <button onClick={(e) => saveEducation(e, edu.id)}>Edit</button>
         </div>
       ))}
     </div>
