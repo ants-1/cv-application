@@ -3,15 +3,19 @@ function Experience({ experience, saveExperience, deleteExperience }) {
         <div className="cv-experience">
             <h3>Experience</h3>
             {experience.map((exp) => (
-                <div key={exp.id}>
-                    <p>Job Title: {exp.job}</p>
-                    <p>Company Name: {exp.company}</p>
-                    <p>Location: {exp.location}</p>
-                    <p>Description: {exp.description}</p>
-                    <p>Start Date: {exp.startDate}</p>
-                    <p>End Date: {exp.endDate}</p>
-                    <button onClick={(e) => saveExperience(e, exp.id)}>Edit</button>
-                    <button onClick={() => deleteExperience(exp.id)}>Delete</button>
+                <div key={exp.id} className="experience-info">
+                    <div className="experience-job">
+                        <span>{exp.job}</span>
+                        <span onClick={() => deleteExperience(exp.id)}>❌</span>
+                    </div>
+                    <div className="experience-company">
+                        <span>{exp.company}, {exp.location}</span>
+                        <span>{exp.startDate} - {exp.endDate}</span>
+                    </div>
+                    <ul>
+                        <li>{exp.description}</li>
+                    </ul>
+                    {/*<p onClick={(e) => saveExperience(e, exp.id)}>Edit</p>*/}
                 </div>
             ))}
         </div>

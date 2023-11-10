@@ -14,8 +14,26 @@ function App() {
   const [email, setEmail] = useState("Email@example.com");
   const [phoneNum, setPhoneNum] = useState("+44 07123456789");
   const [address, setAddress] = useState("20 First Road, London");
-  const [education, setEducation] = useState([]);
-  const [experience, setExperience] = useState([]);
+  const [education, setEducation] = useState([
+    {
+      course: "BSc Computer Science",
+      university: "University of Programming",
+      grade: "2.1",
+      startDate: "2019-09-23",
+      endDate: "2022-06-20",
+    },
+  ]);
+  const [experience, setExperience] = useState([
+    {
+      job: "Software Developer",
+      company: "Facebook",
+      location: "Paris",
+      description:
+        "Proven track record in designing, coding, and deploying scalable software solutions. Adept at collaborative problem-solving, contributing to code reviews, and adhering to agile methodologies. Passionate about staying ahead in the rapidly evolving tech landscape. ",
+      startDate: "2022-08-16",
+      endDate: "2023-11-23",
+    },
+  ]);
 
   function handleFirstNameChange(e) {
     setFirstName(e.target.value);
@@ -138,8 +156,16 @@ function App() {
             phoneNum={phoneNum}
             address={address}
           />
-          <Education education={education} saveEducation={saveEducation} deleteEducation={deleteEducation}/>
-          <Experience experience={experience} saveExperience={saveExperience} deleteExperience={deleteExperience}/>
+          <Education
+            education={education}
+            saveEducation={saveEducation}
+            deleteEducation={deleteEducation}
+          />
+          <Experience
+            experience={experience}
+            saveExperience={saveExperience}
+            deleteExperience={deleteExperience}
+          />
         </section>
       </main>
     </>

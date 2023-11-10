@@ -2,6 +2,7 @@
   --grey: #d1d1d1;
   --light-grey: #f9f9f9;
   --white: #ffffff;
+  --black: #000000;
 }
 
 * {
@@ -17,5 +18,180 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   justify-content: space-evenly;
+}
+
+.general-info,
+.education,
+.experience {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 400px;
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cv-form {
+  width: 350px;
+}
+
+.arrow-icon {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  background-color: var(--grey);
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input {
+  height: 35px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  display: block;
+  background-color: var(--grey);
+  height: 35px;
+  width: 200px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.5s;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 400px;
+  min-height: 700px;
+  height: auto;
+  margin: 30px 0;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cv-general-info {
+  background-color: var(--grey);
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.cv-education,
+.cv-experience {
+  height: 33%;
+  width: 90%;
+  margin: 20px 20px 0 20px;
+}
+
+.toggle-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-info,
+.experience-info {
+  padding: 10px;
+}
+
+.education-course,
+.experience-job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.education-uni,
+.experience-company {
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea {
+    width: 200px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .education-uni,
+  .experience-company {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .education-uni,
+  .experience-company {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .cv {
+    max-width: 600px;
+  }
 }
