@@ -108,6 +108,14 @@ function App() {
     );
   }
 
+  function deleteEducation(id) {
+    setEducation(education.filter((edu) => edu.id !== id));
+  }
+
+  function deleteExperience(id) {
+    setExperience(experience.filter((exp) => exp.id !== id));
+  }
+
   return (
     <>
       <main>
@@ -130,8 +138,8 @@ function App() {
             phoneNum={phoneNum}
             address={address}
           />
-          <Education education={education} saveEducation={saveEducation} />
-          <Experience experience={experience} saveExperience={saveExperience} />
+          <Education education={education} saveEducation={saveEducation} deleteEducation={deleteEducation}/>
+          <Experience experience={experience} saveExperience={saveExperience} deleteExperience={deleteExperience}/>
         </section>
       </main>
     </>

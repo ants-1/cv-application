@@ -1,4 +1,4 @@
-function Education({ education, saveEducation }) {
+function Education({ education, saveEducation, deleteEducation }) {
   return (
     <div className="cv-education">
       <h3>Education</h3>
@@ -11,6 +11,7 @@ function Education({ education, saveEducation }) {
             Start Date: {edu.startDate}, End Date: {edu.endDate}
           </p>
           <button onClick={(e) => saveEducation(e, edu.id)}>Edit</button>
+          <button onClick={() => deleteEducation(edu.id)}>Delete</button>
         </div>
       ))}
     </div>
