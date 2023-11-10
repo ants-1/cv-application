@@ -55,7 +55,7 @@ img {
   width: 350px;
 }
 
-.arrow-icon {
+.arrow-icon, .remove {
   cursor: pointer;
 }
 

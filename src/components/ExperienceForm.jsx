@@ -1,12 +1,15 @@
 import Header from "./Header";
 import { useState } from "react";
+import jobIcon from "../assets/job-icon.png";
+import menuIcon from "../assets/arrow-down-sign-to-navigate.png";
+
 
 function ExperienceForm({ addExperience }) {
   const [isSectionHidden, setIsSectionHidden] = useState(false);
 
   const headerInfo = {
-    headerIcon: "src/assets/job-icon.png",
-    menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
+    headerIcon: jobIcon,
+    menuIcon: menuIcon,
   };
 
   function handleHideSection() {

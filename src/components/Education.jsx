@@ -7,7 +7,7 @@ function Education({ education, saveEducation, deleteEducation }) {
         <div key={edu.id} className="education-info">
           <div className="education-course">
             <p>{edu.course}</p>{" "}
-            <p onClick={() => deleteEducation(edu.id)}>❌</p>
+            <p className="remove" onClick={() => deleteEducation(edu.id)}>❌</p>
           </div>
           <div className="education-uni">
             <span>{edu.university}</span>

@@ -1,12 +1,14 @@
 import Header from "./Header";
 import { useState } from "react";
+import educationIcon from "../assets/education.png";
+import menuIcon from "../assets/arrow-down-sign-to-navigate.png";
 
 function EducationForm({ addEducation }) {
   const [isSectionHidden, setIsSectionHidden] = useState(false);
 
   const headerInfo = {
-    headerIcon: "src/assets/education.png",
-    menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
+    headerIcon: educationIcon,
+    menuIcon: menuIcon,
   };
 
   function handleHideSection() {

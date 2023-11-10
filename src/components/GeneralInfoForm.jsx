@@ -1,5 +1,8 @@
 import Header from "./Header";
 import { useState } from "react";
+import generalIcon from "../assets/user.png";
+import menuIcon from "../assets/arrow-down-sign-to-navigate.png";
+
 
 function GeneralInfoForm({
   changeFirstName,
@@ -11,8 +14,8 @@ function GeneralInfoForm({
   const [isSectionHidden, setIsSectionHidden] = useState(false);
 
   const headerInfo = {
-    headerIcon: "src/assets/user.png",
-    menuIcon: "src/assets/arrow-down-sign-to-navigate.png",
+    headerIcon: generalIcon,
+    menuIcon: menuIcon,
   };
 
   function handleHideSection() {

@@ -6,7 +6,7 @@ function Experience({ experience, saveExperience, deleteExperience }) {
                 <div key={exp.id} className="experience-info">
                     <div className="experience-job">
                         <span>{exp.job}</span>
-                        <span onClick={() => deleteExperience(exp.id)}>❌</span>
+                        <span className="remove" onClick={() => deleteExperience(exp.id)}>❌</span>
                     </div>
                     <div className="experience-company">
                         <span>{exp.company}, {exp.location}</span>
